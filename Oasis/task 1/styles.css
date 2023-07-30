@@ -1,0 +1,108 @@
+/* styles.css */
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #111014;
+  }
+  
+  /* Header Styles */
+  header {
+    background-color: #333;
+    padding: 10px;
+  }
+  
+  nav ul {
+    padding-left:60%;
+    list-style-type: none;
+    margin: 0;
+
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 90px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  /* Banner Styles */
+  #banner {
+    background-image: url('banner-bg.jpg');
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+  }
+  
+  #banner h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+  
+  #banner p {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  
+  #banner .btn {
+    display: inline-block;
+    background-color: #ff6600;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+  
+  /* Featured Games Styles */
+  #featured-games {
+    padding: 50px;
+    text-align: center;
+  }
+  
+  .game {
+    display: block;
+    width: 700px;
+    margin: 20px auto;
+    border: 2px solid #ede8e8;
+    border-radius: 4px;
+    padding: 20px;
+  }
+  
+  .game img {
+    width: 100%;
+    border-radius: 4px;
+  }
+  
+  .game h3 {
+    margin-top: 10px;
+    color: #fff;
+  }
+  .game h2{
+    color:aquamarine;
+    text-decoration:underline;
+    text-decoration-color: #fff;
+  }
+  
+  
+  
+  .game p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color:#fff
+  }
+  
+  /* Footer Styles */
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }
+  

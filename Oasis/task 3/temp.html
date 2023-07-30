@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Temperature Conversion</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <div class="form-container">
+    <h1>Temperature Conversion</h1>
+    <p>
+        Select input temperature type:
+        <select id="inputTempType">
+            <option>Select unit</option>
+            <option value="celsius">Celsius (°C)</option>
+            <option value="fahrenheit">Fahrenheit (°F)</option>
+            <option value="kelvin">Kelvin (K)</option>
+        </select>
+    </p>
+    <p>
+        Enter temperature: <input type="number" id="temperature" step="0.01">
+    </p>
+    <p>
+        Select output temperature type:
+        <select id="outputTempType">
+            <option>Select unit</option>
+            <option value="celsius">Celsius (°C)</option>
+            <option value="fahrenheit">Fahrenheit (°F)</option>
+            <option value="kelvin">Kelvin (K)</option>
+        </select>
+    </p>
+    <p>
+        Converted Temperature: <span id="result"></span>
+    </p>
+    <button onclick="convertTemperature()">Convert</button>
+    </div>
+    <script>
+        function convertTemperature() {
+            const inputTempType = document.getElementById("inputTempType").value;
+            const outputTempType = document.getElementById("outputTempType").value;
+            const inputTemp = parseFloat(document.getElementById("temperature").value);
+
+            // Convert the input temperature to Celsius first
+            let celsiusTemp;
+            switch (inputTempType) {
+                case "celsius":
+                    celsiusTemp = inputTemp;
+                    break;
+                case "fahrenheit":
+                    celsiusTemp = (inputTemp - 32) * (5/9);
+                    break;
+                case "kelvin":
+                    celsiusTemp = inputTemp - 273.15;
+                    break;
+                default:
+                    break;
+            }
+
+            // Convert from Celsius to the desired output temperature
+            let convertedTemp;
+            switch (outputTempType) {
+                case "celsius":
+                    convertedTemp = celsiusTemp;
+                    break;
+                case "fahrenheit":
+                    convertedTemp = (celsiusTemp * 9/5) + 32;
+                    break;
+                case "kelvin":
+                    convertedTemp = celsiusTemp + 273.15;
+                    break;
+                default:
+                    break;
+            }
+
+            document.getElementById("result").textContent = convertedTemp.toFixed(2) + " " + outputTempType.toUpperCase();
+        }
+    </script>
+</body>
+</html>
